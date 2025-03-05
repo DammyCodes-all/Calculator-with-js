@@ -1,0 +1,155 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f0f0f0;
+    font-family: Arial, sans-serif;
+  }
+.calculator{
+    width: 400px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+}
+p{
+  margin: 0;
+  text-align: center;
+  font-size: 0.6rem;
+}
+.display2{
+    width:96%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: -20px;
+    font-size: 1rem;
+    color: grey;
+    margin-left: -20px;
+    position: sticky;
+}
+.display{
+    width:96%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 16px;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+.keypad{
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn{
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    background: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+.clear{
+    color: #f80046;
+}
+.btn:hover{
+    background: #dee2e6;
+}
+.btn:active {
+    background: #ced4da;
+  }
+.pressed{
+  background: #ced4da
+}
+.operator {
+    background: #dee2e6;
+  }
+
+.operator:hover {
+    background: #ced4da;
+  }
+ .equals {
+    background: linear-gradient(180deg, #ff8c42 , #f80046);
+    color: white;
+    box-shadow: 0px 4px 20px rgba(255, 77, 103, 0.6);
+    height: auto;
+    grid-row: span 2;
+    border-radius: 30px;
+    transition:box-shadow 0.5s ease;
+  }
+  .len{
+    color: linear-gradient(180deg, #ff8c42 , #f80046);
+    background: linear-gradient(180deg, #ff8c42, #f80046);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 1.5rem;
+  }
+
+ .equals:hover {
+    box-shadow: 0px 4px 20px rgba(255, 77, 103, 1);
+    background: linear-gradient(135deg , #f80046 , #ff8c42);
+  }
+
+/* Update the operator button containing the moon icon */
+.operator:has(.len) { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 2px solid transparent;
+    background-image: linear-gradient(white, white), 
+                      linear-gradient(180deg, #ff8c42, #696969);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+
+.operator:has(.len):hover {
+    background-image: linear-gradient(#dee2e6, #dee2e6), 
+                      linear-gradient(180deg, #ff8c42, #f80046);
+}
+
+/* Add to your existing styles.css */
+.dark-theme {
+    background: #1a1a1a;
+}
+
+.dark-theme .calculator {
+    background: #2d2d2d;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.dark-theme .display,
+.dark-theme .display2 {
+    color: #ffffff;
+}
+
+.dark-theme .btn {
+    color: #ffffff;
+}
+.dark-theme .btn:hover {
+    background: #3a3a3a;
+}
+.dark-theme .operator{
+  background: #4d4e4e;
+}
+.dark-theme .len{
+  color: linear-gradient(180deg, #ff8c42 , #f80046);
+  background: linear-gradient(180deg, #ff8c42, #f80046);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 1.5rem;
+}
+.dark-theme .equals:hover {
+  box-shadow: 0px 4px 20px rgba(255, 77, 103, 1);
+  background: linear-gradient(135deg , #f80046 , #ff8c42);
+}

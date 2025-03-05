@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <div class="calculator">
+    <div class="display2"></div>
+    <div class="display"></div>
+    <div class="keypad">
+      
+      <button class="btn operator"  onclick="toggleTheme()"><i class="len fas fa-moon" aria-hidden="true"></i></button>
+      <button class="btn operator" id="*" onclick="appendToDisplay('×')">×</button>
+      <button class="btn operator" id="/" onclick="appendToDisplay('÷')">÷</button>
+      <button class="btn operator" id="Backspace" onclick="backspace()"><i class="fas fa-delete-left"></i></button>
+      <button class="btn number" id="7" onclick="appendToDisplay('7')">7</button>
+      <button class="btn number"  id="8" onclick="appendToDisplay('8')">8</button>
+      <button class="btn number" id="9" onclick="appendToDisplay('9')">9</button>
+      <button class="btn operator" id="-"  onclick="appendToDisplay('-')">–</button>
+      <button class="btn number" id="4"  onclick="appendToDisplay('4')">4</button>
+      <button class="btn number" id="5"  onclick="appendToDisplay('5')">5</button>
+      <button class="btn number" id="6"  onclick="appendToDisplay('6')">6</button>
+      <button class="btn operator" id="+"  onclick="appendToDisplay('+')">+</button>
+      <button class="btn number" id="1"  onclick="appendToDisplay('1')">1</button>
+      <button class="btn number" id="2"  onclick="appendToDisplay('2')">2</button>
+      <button class="btn number" id="3"  onclick="appendToDisplay('3')">3</button>
+      <button class="btn equals" id="Enter"  onclick="calculate()">=</button>
+      <button class="btn clear" id="Delete"  onclick="clearDisplay()">AC</button>
+      <button class="btn number" id="0"  onclick="appendToDisplay('0')">0</button>
+      <button class="btn number" id="."  onclick="appendToDisplay('.')">.</button>
+    </div><br>
+    <p>Made by Dammycodes--All</p>
+  </div>
+  <script src="calc.js"></script>
+  <footer>
+  </footer>
+</body>
+</html>
