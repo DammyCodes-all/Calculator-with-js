@@ -3,7 +3,7 @@ let display2 = document.querySelector(".display2");
 
 function appendToDisplay(value) {
     // Prevent multiple operators in a row
-    const operators = ['+', '–', '×', '÷'];
+    const operators = ['+', '–', '×', '÷' , '-'];
     const oper = ['×', '÷', "+"];
     const lastChar = display.innerHTML.slice(-1);
     if (display.innerHTML === '' && oper.includes(value)) {
