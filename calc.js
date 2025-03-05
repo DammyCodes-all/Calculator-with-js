@@ -21,9 +21,23 @@ function appendToDisplay(value) {
         alert("You have reached the maximum limit of characters")
         return;
     }
-    
+    // If the Second display is not empty and the last character is an operator, replace it with the new operator
+    if (display2.innerHTML !== '') {
+        if (operators.includes(value)) {
+            // Continue calculation with result
+            display.innerHTML += value;
+            display2.innerHTML = ''; // Clear history after operator press
+        } else {
+            // Start new calculation
+            clearDisplay();
+            display.innerHTML = value;
+        }
+        return;
+    }
+    // Default append behavior
     display.innerHTML += value;
 }
+
 
 function backspace() {
     if (display.innerHTML.length > 0) {
